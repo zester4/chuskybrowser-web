@@ -38,7 +38,7 @@ export default function Home() {
 
   return <main>
     <div className="announcement">The browser runtime for AI agents <span>→</span></div>
-    <nav className="nav wrap"><Mark /><div className="nav-links"><a href="#product">Product</a><a href="#platform">Platform</a><a href="#developers">Developers</a><a href="#company">Company</a></div><div className="nav-actions"><a href="#contact" className="login">Log in</a><a href="#contact" className="button button-dark small">Start building <span>↗</span></a></div></nav>
+    <nav className="nav wrap"><Mark /><div className="nav-links"><a href="/product">Product</a><a href="/platform">Platform</a><a href="/developers">Developers</a><a href="/company">Company</a></div><div className="nav-actions"><a href="#contact" className="login">Log in</a><a href="#contact" className="button button-dark small">Start building <span>↗</span></a></div></nav>
 
     <section className="hero wrap"><div className="eyebrow">BROWSER INFRASTRUCTURE FOR AGENTS</div><h1>Your agents deserve a <span>real browser.</span></h1><p className="hero-copy">Give your AI the ability to browse, interact, and get work done on the web. Built for developers who ship agents that actually work.</p><div className="hero-actions"><a href="#contact" className="button button-dark">Start building <span>↗</span></a><a href="#developers" className="button button-light">Read the docs <span>→</span></a></div><div className="hero-visual"><div className="glow glow-one" /><div className="glow glow-two" /><BrowserMockup /></div></section>
 
