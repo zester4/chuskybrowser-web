@@ -71,6 +71,13 @@ await browser.waitForApproval(approval.id);` },
 }` },
 ]
 
+function highlightCode(code: string) {
+  return code.split(/(\b(?:const|await|import|from|return|true|false|new|async|type|object|string)\b|'[^']*'|\"[^\"]*\"|\/\/[^\n]*)/g).map((part, index) => {
+    const className = /^(const|await|import|from|return|true|false|new|async|type|object|string)$/.test(part) ? 'code-purple' : /^['\"]/.test(part) ? 'code-green' : /^\/\//.test(part) ? 'code-comment' : ''
+    return <span className={className} key={`${part}-${index}`}>{part}</span>
+  })
+}
+
 export default function DeveloperTabs() {
   const [active, setActive] = useState(0)
   const [copied, setCopied] = useState(false)
@@ -91,7 +98,7 @@ export default function DeveloperTabs() {
     </div>
     <div className="developer-code-frame">
       <div className="developer-code-bar"><span>{current.title}</span><button onClick={copyCode}>{copied ? 'Copied' : 'Copy code'}</button></div>
-      <pre><code>{current.code}</code></pre>
+      <pre><code>{highlightCode(current.code)}</code></pre>
     </div>
   </div>
 }
